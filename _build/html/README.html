@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>BIOMADE Electrochemical Bioreactor Monitoring &#8212; My Jupyter Book</title>
+    <title>BIOMADE Electrochemical Bioreactor Monitoring Overview&#8212;</title>
   
   
   
@@ -56,7 +56,6 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -149,7 +148,7 @@
   
   
   
-    <p class="title logo__title">My Jupyter Book</p>
+    <p class="title logo__title"> <img src="WISE/logo.jpg" alt="Image Description"></p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -176,7 +175,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">BIOMADE Electrochemical Bioreactor Monitoring</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="WISE/content.html">Content in Jupyter Book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="WISE/content.html">Content in Jupyter Book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="arabic simple">
 <li class="toctree-l2"><a class="reference internal" href="WISE/intro.html">Welcome to your Jupyter Book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WISE/markdown.html">Markdown Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WISE/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
@@ -330,9 +329,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-book">Building the book</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting-the-book">Hosting the book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-goal">Project Goal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="">Hosting the book</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
@@ -351,29 +350,125 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="biomade-electrochemical-bioreactor-monitoring">
 <h1>BIOMADE Electrochemical Bioreactor Monitoring<a class="headerlink" href="#biomade-electrochemical-bioreactor-monitoring" title="Link to this heading">#</a></h1>
 <p>Biomade Electrochemical Bioreactor Monitoring guide</p>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h2>
-<section id="building-the-book">
-<h3>Building the book<a class="headerlink" href="#building-the-book" title="Link to this heading">#</a></h3>
-<p>If you’d like to develop and/or build the BIOMADE Electrochemical Bioreactor Monitoring book, you should:</p>
-<ol class="arabic simple">
-<li><p>Clone this repository</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> (it is recommended you do this within a virtual environment)</p></li>
-<li><p>(Optional) Edit the books source files located in the <code class="docutils literal notranslate"><span class="pre">WISE/</span></code> directory</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">clean</span> <span class="pre">WISE/</span></code> to remove any existing builds</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">WISE/</span></code></p></li>
-</ol>
-<p>A fully-rendered HTML version of the book will be built in <code class="docutils literal notranslate"><span class="pre">WISE/_build/html/</span></code>.</p>
+<section id="project-goal">
+<h2>Project Goal</h2>
+<p>Deploy a miniaturized biosensor to continuously monitor and report data from within a bioreactor environment.</p>
 </section>
-<section id="hosting-the-book">
-<h3>Hosting the book<a class="headerlink" href="#hosting-the-book" title="Link to this heading">#</a></h3>
-<p>Please see the <a class="reference external" href="https://jupyterbook.org/publish/web.html">Jupyter Book documentation</a> to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.</p>
-<p>For GitHub and GitLab deployment specifically, the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">cookiecutter-jupyter-book</a> includes templates for, and information about, optional continuous integration (CI) workflow files to help easily and automatically deploy books online with GitHub or GitLab. For example, if you chose <code class="docutils literal notranslate"><span class="pre">github</span></code> for the <code class="docutils literal notranslate"><span class="pre">include_ci</span></code> cookiecutter option, your book template was created with a GitHub actions workflow file that, once pushed to GitHub, automatically renders and pushes your book to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch of your repo and hosts it on GitHub Pages when a push or pull request is made to the main branch.</p>
+<section id="What-is-a-Bioreactor?">
+<h2>What is a Bioreactor?</h2>
+<p>A bioreactor is a vessel or system designed to cultivate microorganisms, cells, or tissues under controlled conditions. It allows for the manipulation of biological processes to produce specific products, such as medicines, food ingredients, or biofuels. By providing an optimal environment for biochemical reactions, bioreactors enable organisms to grow and transform raw materials into useful products</p>
 </section>
+<section id="How-Does-the-Chip-Work-High-Level">
+<h2>How Does the Chip Work (High-Level)?</h2>
+<p>The system consists of electrodes submerged in a biological environment (e.g., a cell solution). The interaction between the electrodes and the biological solution behaves similarly to a capacitor. Thus, we can model this interaction using electrical circuits.</p>
+<img src="WISE/Example.jpg" alt="Image Description">
 </section>
-<section id="contributors">
-<h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">#</a></h2>
-<p>We welcome and recognize all contributions. You can see a list of current contributors in the <a class="reference external" href="https://github.com/umbertomanganaro328/WISE/graphs/contributors">contributors tab</a>.</p>
+<section id="how-it-is-done">
+<h2>How it is Done<a class="headerlink" href="#how-it-is-done" title="Link to this heading">#</a></h2>
+  
+<ul class="arabic simple">
+<li><b>Electrochemical Impedance Spectroscopy (EIS):</b> The chip uses EIS to measure the impedance of the biological solution, which provides information about the solution's properties and the interaction with the electrodes.</li></b></li>
+<li><b>Cyclic Voltammetry (CV):</b> Sweeps across a voltage range, measuring current readings. For our purposes, a change in current (e.g., an increase in current) can correlate with an increase in the concentration of cells.</li>
+<li>For our purposes, a change in current (e.g., an increase in current) can correlate with an increase in the concentration of cells.
+We have also worked with can perform amperometry on custom chips and commercial devices.</li>
+</ul>
+
+</section>
+<section id="chip-component-breakdown:">
+<h2>Chip Component Breakdown:<a class="headerlink" href="#chip-component-breakdown:" title="Link to this heading">#</a></h2>
+  
+<ul class="arabic simple">
+<li><b>Custom Potentiostat Chip: </b>Designed by Alperen (PhD-analog security) & Dilara (PhD-analog front-end). </li>
+<li><b>What is a Potentiostat?</b>A potentiostat is an analytical instrument designed to control the working electrode's potential in a multiple-electrode electrochemical cell.  The potentiostat contains many internal circuits that allow it to function in this capacity.  The circuits generate and measure potentials and currents. <a href="https://pineresearch.com/support-article/what-is-a-potentiostat-and-how-does-it-work/">(What is a potentiostat)</a></li>
+<li><b>Potentiometers:</b> Adjust and calibrate resistance to fine-tune the board. On the minimized board, fixed resistors (determined by Alperen) will replace variable resistors.</li>
+<li><b>FPGA:</b>Used for digital signal clocking</li>
+<li><b>Microcontroller:</b> Manages the chip’s operations and communication (Computer ← UART → Microcontroller ← SPI → Custom IC Chip).</li>
+<li><b>Programming:</b>Implemented in Python with thousands of lines of code.</li>
+<li><b>Electrode Connectors: </b>Three independent channels (CH1, CH2, and CHSA) are used for debugging purposes on the large-scale test board. These channels connect to probes interacting with the biological solution.</li>
+<li><b>Excitation Frequency (EIS):</b> To collect data, the electrode is excited with a sine wave of varying frequencies over time.</li>
+<li><b>External Waveform Generator:</b>Used to generate the excitation signal.</li>
+<li><b>Current Measurement:</b>The chip measures the current and calculates impedance (since the voltage is known). The goal is to demonstrate that an increase in current corresponds to an increase in cell concentration or optical density (OD).</li>
+
+</ul>
+
+</section>
+<section id="functionality">
+<h2>Functionality<a class="headerlink" href="#functionality" title="Link to this heading">#</a></h2>
+  
+<ul class="arabic simple">  
+<li><b>Waveform Application:</b>Needed to measure electrode waveform.</li>
+<li><b>Electrode Output:</b> Produces a waveform that is compared to the applied waveform to measure phase difference and impedance components (real and imaginary parts).</li>
+<li><b>Electrochemical Cell Waveform Analysis: </b> Helps determine characteristics of the biological environment.</li>
+
+</ul>
+
+</section>
+<section id="project-significance:">
+<h2>Project Significance:<a class="headerlink" href="#project-significance" title="Link to this heading">#</a></h2>
+<p>Bioreactors are essential for biomanufacturing chemicals. This project, in collaboration with an industry leader in biomanufacturing, aims to integrate multiple disciplines to develop systematic biosensors for biomanufacturing applications.</p>
+</section>
+
+<section id="why-this-matters:">
+<h2>Why This Matters:<a class="headerlink" href="#why-this-matters" title="Link to this heading">#</a></h2>
+<h3>Importance of Bioreactors in Biomanufacturing</h3>
+  
+<ul class="arabic simple">
+<li>Bioreactors are essential for biomanufacturing chemicals.</li>
+<li>They create biologically active environments for industrial biotechnology.</li>
+</ul>
+
+<h3>Industry Collaboration</h3>
+  
+<ul class="arabic simple">
+  <li>The project is in partnership with an industry leader in biomanufacturing.</li>
+  <li>The goal is to integrate multiple fields to develop systematic biosensors for biomanufacturing applications.</li>
+</ul>
+
+<h3>CapraScience’s Biofilm Reactor</h3>
+<ul class="arabic simple">
+  
+  <li>Utilizes feedstock waste to sustain cells and produce retinol (Vitamin A).</li>
+  <li>Offers positive environmental impacts by repurposing waste materials.</li>
+</ul>
+
+
+<h3>Challenges in Bioreactor Monitoring</h3>
+  
+<ul class="arabic simple">
+  <li>Currently, bioreactors lack real-time internal monitoring.</li>
+  <li>Monitoring relies on small, localized samples, which may miss early-stage issues.</li>
+  <li>Late detection of problems can compromise large quantities of the compound.</li>
+  <li>Traditional bioreactor monitoring relies on small localized sampling, which may not detect issues in time, leading to product loss.</li>
+</ul>
+
+
+<h3>WISE Circuit Group’s Solution</h3>
+  
+<ul class="arabic simple">
+  <li>Developing an electrochemical biosensor (potentiostat chip) for wireless, continuous monitoring.</li>
+  <li>Inspired by ingestible biosensing technology to enhance real-time data collection.</li>
+</ul>
+
+
+<h3>Benefits of Wireless Sensors</h3>
+  
+<ul class="arabic simple"> 
+  <li>Enables comprehensive monitoring across the entire bioreactor column.</li>
+  <li>Allows for early issue detection, reducing manufacturing costs and waste.</li>
+  <li>Ensures biomanufacturing processes remain as expected.</li>
+</ul>
+
+
+<h3>Benefits of Wireless Sensors</h3>
+  
+<ul class="arabic simple">
+  <li>Enables comprehensive monitoring across the entire bioreactor column.</li>
+  <li>Allows for early issue detection, reducing manufacturing costs and waste.</li>
+  <li>Ensures biomanufacturing processes remain as expected.</li>
+</ul>
+
+
+
 </section>
 <section id="credits">
 <h2>Credits<a class="headerlink" href="#credits" title="Link to this heading">#</a></h2>
@@ -445,9 +540,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-book">Building the book</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting-the-book">Hosting the book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-goal">Project Goal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-bioreactor?">What is a Bioreactor?</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributors">Contributors</a></li>
