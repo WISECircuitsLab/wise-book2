@@ -1,4 +1,4 @@
-# Contributing
+# SPI Protocol
 
 Contributions are welcome, and they are greatly appreciated! Every little bit
 helps, and credit will always be given. You can contribute in the ways listed below.
@@ -51,6 +51,6 @@ Ready to contribute? Here's how to set up `BIOMADE Electrochemical Bioreactor Mo
 5. Commit your changes and push your branch to GitHub.
 6. Submit a pull request through the GitHub website.
 
-## Code of Conduct
+## Table Of Contents
 
-Please note that the BIOMADE Electrochemical Bioreactor Monitoring project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
+Please note that the BIOMADE Electrochemical Bioreactor Monitoring project is released with a [Contributor Table Of Contents](CONDUCT.md). By SPI Protocol to this project you agree to abide by its terms.

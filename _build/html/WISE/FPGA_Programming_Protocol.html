@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Markdown Files &#8212;  <img src="WISE/logo.jpg" alt="Image Description"></title>
+    <title>FPGA Programming Protocol &#8212;  <img src="WISE/logo.jpg" alt="Image Description"></title>
 
 
   <script data-cfasync="false">
@@ -58,8 +58,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'WISE/markdown';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="next" title="Protocol for Bioreactor Setup and Monitoring" href="protocol-bioreactor-setup-monitoring.html" />
+    <link rel="prev" title="Protocol STM32Programmer_Guide" href="Protocol_STM32Programmer_Guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -140,7 +140,7 @@
     
   
 
-<a class="navbar-brand logo" href="../CONDUCT.html">
+<a class="navbar-brand logo" href="../TableofContents.html">
   
   
   
@@ -166,19 +166,19 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../CONDUCT.html">
-                    Code of Conduct
+                <a class="reference internal" href="../TableofContents.html">
+                    Table Of Contents
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">BIOMADE Electrochemical Bioreactor Monitoring</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="content.html">Content in Jupyter Book</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Welcome to your Jupyter Book</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-</ul>
+<li class="toctree-l1"><a class="reference internal" href="../SPI-Protocol.html">SPI Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../biooverview.html">BIOMADE Electrochemical Bioreactor Monitoring</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="content.html"> Protocols and Procedures</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Protocol_STM32Programmer_Guide.html">Protocol STM32Programmer_Guide</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">FPGA Programming Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol-bioreactor-setup-monitoring.html">Protocol for Bioreactor Setup and Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Protocol_for_CV_and_EIS_Experiments.html">Protocol for CV and EIS Experiments</a></li>
 </details></li>
 </ul>
 
@@ -318,7 +318,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Markdown Files</h1>
+    <h1>FPGA Programming Protocol</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -328,10 +328,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clock-output-setup">FPGA Clock Output Setup Protocol for Chip Testing PCB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Material-protocol">Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Steps">Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Notes-protocol">Notes</a></li>
 </ul>
             </nav>
         </div>
@@ -344,52 +344,98 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Link to this heading">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Link to this heading">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-<p>For more about MyST, see <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST Markdown Overview</a>.</p>
+<h1>FPGA Programming Protocol<a class="headerlink" href="#markdown-files" title="Link to this heading">#</a></h1>
+<p>There is a file in <i>C:\Users\WISE Circuits 2\Desktop\Alperen\BioMADE_Test_FPGA.zip</i>
+These are the original files to generate a clock for the chip</p>
+<h5>This section goes over how to do it again from scratch</h5>
+<img src="instruction3.jpg" alt="Image Description">
+<section id="clock-output-setup">
+<h2>FPGA Clock Output Setup Protocol for Chip Testing PCB<a class="headerlink" href="#clock-output-setup" title="Link to this heading">#</a></h2>
+<p><b>Objective:</b>Set up a clock output on the FPGA for testing a Chip Testing PCB using the Clocking Wizard.</p>
+
 </section>
-<section id="sample-roles-and-directives">
-<h2>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Link to this heading">#</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<p>Here is a “note” directive:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
-</div>
-<p>It will be rendered in a special box when you build your book.</p>
-<p>Here is an inline directive to refer to a document: <a class="reference internal" href="markdown-notebooks.html"><span class="doc">Notebooks with MyST Markdown</span></a>.</p>
+<section id="Material-protocol">
+<h4>Materials<a class="headerlink" href="#Material-protocol" title="Link to this heading">#</a></h4>
+<ul>
+  <li>FPGA development board</li>
+  <li>Chip Testing PCB</li>
+  <li>Vivado Design Suite (or relevant FPGA development software)</li>
+  <li>Computer with necessary drivers and development software installed</li>
+</ul>
 </section>
-<section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: .</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
+<section id="Steps">
+<h4>Steps<a class="headerlink" href="#Steps" title="Link to this heading">#</a></h4>
+<ol>
+  <li><b>Open Vivado and Create a Project</b>
+    <ul>
+      <li>Launch the Vivado Design Suite.</li>
+      <li>Open or create a new FPGA project.</li>
+    </ul>
+  </li>
+  <li><b>Open IP Catalog</b>
+    <ul>
+      <li>In the project dashboard, navigate to the IP Catalog.</li>
+      <li>Search for <b>Clocking Wizard</b> in the catalog search bar.</li>
+    </ul>
+  </li>
+  <li><b>Configure the Clocking Wizard</b>
+    <ul>
+      <li>Select <b>Clocking Wizard</b> from the search results.</li>
+      <li>Name your clock component appropriately (e.g., <i>clk_gen</i>).</li>
+    </ul>
+  </li>
+  <li><b>Set Output Clock Parameters</b>
+    <ul>
+      <li>In the Clocking Wizard settings, locate the <b>Output Clock</b> section.</li>
+      <li>Change the <b>output frequency</b> to the desired value for your Chip Testing PCB.</li>
+    </ul>
+  </li>
+  <li><b>Configure Clocks</b>
+    <ul>
+      <li>Under the clock outputs, ensure Clock 1 is selected as the active output clock.</li>
+      <li>Set the <b>duty cycle</b> to <b>50%</b> for a standard symmetric clock output.</li>
+      <li>Disable any additional output signals like the locked signal (set to "No").</li>
+    </ul>
+  </li>
+  <li><b>Generate Clocking Wizard IP</b>
+    <ul>
+      <li>Click <b>Next</b> through the remaining setup windows.</li>
+      <li>Review the configuration and click <b>Generate</b> to create the clocking component.</li>
+    </ul>
+  </li>
+  <li><b>Verify Clock Output</b>
+    <ul>
+      <li>Ensure that the clocking wizard has been generated successfully, and the clock output is ready for use with the Chip Testing PCB.</li>
+    </ul>
 </section>
-<section id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Link to this heading">#</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<section id="Notes-protocol">
+<h4>Notes<a class="headerlink" href="#Notes-protocol" title="Link to this heading">#</a></h4>
+<section id="notes">
+  <ul>
+    <li>If further adjustments to the clock signal are needed, return to the Clocking Wizard and modify the parameters.</li>
+    <li>Follow your FPGA toolchain’s standard flow for synthesizing and programming the design to the FPGA.</li>
+  </ul>
+</section>
+<section id="output">
+  <h4>Output<a class="headerlink" href="#output" title="Link to this heading">#</a></h4>
+  <ul>
+    <li>Clock signal is generated according to your specifications and routed for use with the Chip Testing PCB.</li>
+  </ul>
+<img src="instruction3.jpg" alt="Image Description">
 </section>
 </section>
+</section>
+<section id="clock-settings">
+  <h4>Clock Settings to Use<a class="headerlink" href="#clock-settings" title="Link to this heading">#</a></h4>
+  <ul>
+    <li><b>Clk_in1</b> = 125&nbsp;MHz (the internal CLK is hard set to 125&nbsp;MHz, use this value)</li>
+    <ul>
+      <li>If this is not set to the value of the internal oscillator, the system will create a voltage divider. For example, if it is set to 100&nbsp;MHz, and the output is set to 10&nbsp;MHz, it will output 12&nbsp;MHz.</li>
+    </ul>
+    <li><b>Clk_out1</b> = 10&nbsp;MHz (the frequency at which chip characterization was performed)</li>
+  </ul>
+</section>
+
 
     <script type="text/x-thebe-config">
     {
@@ -422,20 +468,20 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Protocol_STM32Programmer_Guide.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Protocol STM32Programmer_Guide</p>
       </div>
     </a>
     <a class="right-next"
-       href="markdown-notebooks.html"
+       href="protocol-bioreactor-setup-monitoring.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Protocol for Bioreactor Setup and Monitoring</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -455,10 +501,11 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-roles-and-directives">Sample Roles and Directives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-more">Learn more</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clock-output-setup">FPGA Clock Output Setup Protocol for Chip Testing PCB
+?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Material-protocol">Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Steps">Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Notes-protocol">Notes</a></li>
 </ul>
   </nav></div>
 
@@ -473,7 +520,7 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book community
+Wise Labs
 </p>
 
   </div>
@@ -483,7 +530,7 @@ By The Jupyter Book community
 
   <p class="copyright">
     
-      © Copyright 2023.
+      ©  .
       <br/>
     
   </p>

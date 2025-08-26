@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Notebooks with MyST Markdown &#8212; </title>
+    <title>Protocol for Bioreactor Setup and Monitoring &#8212; </title>
   
   
   
@@ -56,10 +56,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'WISE/markdown-notebooks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'WISE/protocol-bioreactor-setup-monitoring';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="FPGA Programming Protocol" href="FPGA_Programming_Protocol.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -140,7 +140,7 @@
     
   
 
-<a class="navbar-brand logo" href="../CONDUCT.html">
+<a class="navbar-brand logo" href="../TableofContents.html">
   
   
   
@@ -166,18 +166,20 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../CONDUCT.html">
-                    Code of Conduct
+                <a class="reference internal" href="../TableofContents.html">
+                    Table Of Contents
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">BIOMADE Electrochemical Bioreactor Monitoring </a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="content.html">Content in Jupyter Book</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Welcome to your Jupyter Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SPI-Protocol.html">SPI Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../biooverview.html">BIOMADE Electrochemical Bioreactor Monitoring </a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="content.html"> Protocols and Procedures</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Protocol_STM32Programmer_Guide.html">Protocol STM32Programmer_Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FPGA_Programming_Protocol.html">FPGA Programming Protocol</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Protocol for Bioreactor Setup and Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Protocol_for_CV_and_EIS_Experiments.html">Protocol for CV and EIS Experiments</a></li>
+
 </ul>
 </details></li>
 </ul>
@@ -234,7 +236,7 @@
       
       
       
-      <li><a href="../_sources/WISE/markdown-notebooks.md" target="_blank"
+      <li><a href="../_sources/WISE/protocol-bioreactor-setup-monitoring.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +320,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Notebooks with MyST Markdown</h1>
+    <h1>Protocol for Bioreactor Setup and Monitoring</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -328,9 +330,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assembly-sterilization">Bioreactor Assembly + Sterilization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inoculation">Bioreactor Inoculation with Media and Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heating-air-circulation">Heating and Air Circulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#od-monitoring">OD Monitoring</a></li>
 </ul>
             </nav>
         </div>
@@ -343,49 +346,122 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="notebooks-with-myst-markdown">
-<h1>Notebooks with MyST Markdown<a class="headerlink" href="#notebooks-with-myst-markdown" title="Link to this heading">#</a></h1>
-<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.</p>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Link to this heading">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
-</div>
-</section>
-<section id="create-a-notebook-with-myst-markdown">
-<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Link to this heading">#</a></h2>
-<p>MyST Markdown notebooks are defined by two things:</p>
-  
-<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-See the YAML at the top of this page for example.</p></li>
-<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
+<h2>Bioreactor Setup and Monitoring Protocol</h2>
+<section id="assembly-sterilization">
+<h4>Bioreactor Assembly + Sterilization<a class="headerlink" href="#assembly-sterilization" title="Link to this heading">#</a></h4>
+<p><b>NOTE:</b> Use heat proof gloves when handling anything coming out of the autoclave. Items may look cool to the touch but will burn you!</p>
 
-<p>That’s all that is needed to get started!</p>
+    <ol>
+      
+      <li>First assemble the bioreactor using the pictures below.</li>
+      <li>Place the black rubber o-rings on each end of the column to prevent liquid leakage. Ensure the shape of the o-ring fits within the ridges on the column (Fig 1).</li>
+      <li>Use the two 6-inch clamps to connect the cap and domed top to the column (Fig 2).</li>
+      <li>Attach the electrode holder through the center port and ensure it is secured.</li>
+      <li>Add the magnetic stir bar into the bioreactor through the central port. (This needs to be autoclaved inside the bioreactor).</li>
+      <li>Use aluminum foil to cover all ports on the domed cap.</li>
+      <li>Using the sterile secondary container (plastic box labelled “sterile secondary container”), transfer the bioreactor to Photonics, floor 6.</li>
+      <li>Next sterilize the bioreactor.
+<p><b>Ensure you have received autoclave training from someone in the Jimenez or WISE Lab before proceeding with the next steps.</b></p>
+          
+        <li>Place the bioreactor in an autoclave bin.</li>
+        <li>Ensure all ports are covered with aluminum foil.</li>
+        <li>Place autoclave tape on all ports and use it to secure the aluminum foil covering.</li>
+        <li>Open the autoclave using the “open door” button.</li>
+        <ol type="a">
+          <li>If there is already autoclaved material in the autoclave, use the <b>heat proof gloves</b> and carefully remove the autoclave bin with the samples inside. There is usually a table or cart you can set them on.</li>
+        </ol>
+        
+        <li>Carefully place the autoclave bin with the bioreactor into the autoclave (can use either shelf).</li>
+        <li>Close the door by pressing “close door” - you may need to manually lift the door as well to ensure it is completely closed.</li>
+          <li>Select “cycle select”.</li>
+          <li>Select “gravity”.</li>
+          <li>Select the 30 min gravity cycle setting.</li>
+          <li>When prompted, click “start cycle”.</li>
+          <li>Wait by the autoclave for approximately 2-5 minutes until the gasket pressure comes to pressure and the cycle starts.</li>
+          <ol type="a">
+            <li>You will see an “abort cycle” button at the bottom of the screen, this means the cycle has started!</li>
+          </ol>
+<p><b>Gravity cycles typically take around 1 hour, you can come back later in the day to remove it from the autoclave.</b></p>
+      <p><b>Because the autoclave is hot and the bioreactor is metal, it gets EXTREMELY hot and will burn you if touched without heat proof gloves. Use heat proof gloves and let cool at room temperature for approximately 1 hour before handling without gloves.</b></p>
+          <li> Transfer the bioreactor to WISE Lab in PHO, or keep in CILSE until needed.</li>
+    </ol>
+  </section>
+<section id="inoculation">
+<h4>Bioreactor Inoculation with Media and Cells<a class="headerlink" href="#inoculation" title="Link to this heading">#</a></h4>
+    <ol>
+      <li><b>NOTE:</b> As of 2/18 inoculation will occur in WISE Lab (PHO 303), this may change as we set up in the Jimenez lab.</li>
+      <li>First ensure sufficient media (3L) and liquid cell cultures have been prepared.</li>
+      <li>Spray the entire bioreactor (concentrating on the ports) with 70% ethanol to sterilize the surface.</li>
+      <li>Loosen the cap of the 1L media bottle and loosen the aluminum foil covering the center port.</li>
+      <li>Carefully pour the media from the bottle into the bioreactor without touching the bioreactor with the lip of the bottle.</li>
+      <li>Repeat steps 3-4 with the second bottle of media.</li>
+      <li>Cover the port with aluminum foil and spray with ethanol.</li>
+      <li>When ready to inoculate, first measure the OD of the liquid culture and note this in the experiment documentation.</li>
+      <li>Calculate the amount of culture to add. Add enough of the liquid culture to the 2L of media to obtain a starting OD of 0.1. This will vary depending on the OD of the liquid culture used.
+        <ul>
+          <li>Think of this calculation as a dilution of the liquid culture using 2L of media.</li>
+        </ul>
+      </li>
+      <li>Spray the port with 70% ethanol.</li>
+      <li>Loosen the cap of the falcon tube with culture and loosen the aluminum foil covering the center port.</li>
+      <li>Pour the culture into the bioreactor being careful not to touch the lip of the tube to the bioreactor.</li>
+      <li>Cover the port with aluminum foil and spray with 70% ethanol.</li>
+    </ol>
+  </section>
+<section id="heating-air-circulation">
+<h4>Heating and Air Circulation<a class="headerlink" href="#heating-air-circulation" title="Link to this heading">#</a></h4>
+    <ol>
+      <li>Put gloves on.</li>
+      <li>Place the bioreactor inoculated with media and cells onto the heating and stir plate.</li>
+      <ol type="a">
+        <li>The bioreactor should already have a magnetic stir bar inside.</li>
+      </ol>
+      <li>Sterilize tubing for air circulation and pump.</li>
+      <ol type="a">
+        <li>Make a 10% bleach solution using a large beaker.</li>
+        <li>Insert the air tubing and the small pump tubing into the bleach solution and let sit for 15 minutes.</li>
+        <ul>
+          <li>Ensure that the inner lining of the tubing is in contact with the bleach.</li>
+        </ul>
+      </ol>
+      <li>Connect the two tubings together (there is a smaller one which fits into the larger one).</li>
+      <li>Connect the larger tubing to the air line and point the open end of the tube into the sink.</li>
+      <li>Turn on the air for approximately 1 minute or until all the liquid is expelled from the tube. Turn off air.</li>
+      <li>Spray one of the side ports with 70% ethanol, remove the aluminum foil, and place the tube inside.</li>
+      <li>Cover the port with the aluminum foil and spray with ethanol again.</li>
+      <li>Turn on the air and observe from the top port if bubbling is occurring. Turn off air until the end of the set up.</li>
+       <ol type="a">
+        <li>See picture below of how much bubbling is correct for Marinobacter.</li>
+        <li>If using a new strain check with the bio team lead.</li>
+      </ol>
+      <li>Spray the top port with ethanol (the port with the electrode holder). Peel back the aluminum foil. Spray the electrode connector with ethanol and let dry for 1 min.</li>
+      <li>Carefully insert the connector with the electrode into the electrode holder. And ensure that ONLY the electrode is submerged in the liquid.</li>
+      <li>Cover the port with aluminum foil and spray again with ethanol.</li>
+      <li>For the pump tubing, connect the pump to the tubing and turn the pump on to get rid of any leftover bleach in the tubing.</li>
+      <li>Spray the unused side port with ethanol. Peel back the aluminum foil. Spray the tubing with ethanol and let dry for 1 min.</li>
+      <li>Insert the “input” end of the tubing into the bioreactor using the unused side port and cover with aluminum foil. Leave the “output” end of the tubing in an empty falcon tube.</li>
+      <li>Turn on heating to 30°C for Marinobacter, and stirring to 120 rpm for Marinobacter.
+        <ul>
+          <li>Settings may change depending on strain of bacteria in use. Check with bio lead.</li>
+        </ul>
+      </li>
+      <li>Turn on air and ensure bubbling is occurring.</li>
+    </ol>
+  </li>
 </section>
-<section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Link to this heading">#</a></h2>
-<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
-</pre></div>
-</div>
+<section id="od-monitoring">
+<h4>OD Monitoring<a class="headerlink" href="#od-monitoring" title="Link to this heading">#</a></h4>
+    <ol>
+      <li>Fill an empty cuvette with 1mL of plain media (BB for Marinobacter) using a 1000uL pipette.</li>
+      <li>Fill another empty cuvette with 900uL of plain media (BB for Marinobacter) using a 1000uL pipette.</li>
+      <li>Start the pump to waste approximately 200uL of culture (approximately 1 min) into a falcon tube. Turn the pump off.</li>
+      <li>Take 100uL of the culture and add it to the cuvette with 900uL of plain media.</li>
+      <li>Turn on the OD reader.</li>
+      <li>Insert the cuvette with plain media and measure the blank.</li>
+      <li>Remove the cuvette and insert the cuvette with media and cells and measure the sample’s OD.</li>
+      <li>Multiply the number shown by 10, this is the OD of the bioreactor. Mark the time and the OD in the experiment documentation.</li>
+      <li>Perform an OD measurement 2x a day.</li>
+    </ol>
 </section>
 </section>
 
@@ -420,13 +496,22 @@ See the YAML at the top of this page for example.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown.html"
+       href="FPGA_Programming_Protocol.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">FPGA Programming Protocol</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Protocol_for_CV_and_EIS_Experiments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Protocol for CV and EIS Experiments</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -444,9 +529,10 @@ See the YAML at the top of this page for example.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assembly-sterilization">Bioreactor Assembly + Sterilization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inoculation">Bioreactor Inoculation with Media and Cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heating-air-circulation">Heating and Air Circulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#od-monitoring">OD Monitoring</a></li>
 </ul>
   </nav></div>
 
@@ -461,7 +547,7 @@ See the YAML at the top of this page for example.</p></li>
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book community
+Wise Labs
 </p>
 
   </div>
@@ -471,7 +557,7 @@ By The Jupyter Book community
 
   <p class="copyright">
     
-      © Copyright 2023.
+      ©  .
       <br/>
     
   </p>

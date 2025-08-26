@@ -1,9 +1,9 @@
 root: CONDUCT
 entries:
-- file: CONTRIBUTING
+- file: SPI Protocol
 - file: README
 - file: WISE/content
   entries:
   - file: WISE/intro
   - file: WISE/markdown
-  - file: WISE/markdown-notebooks
+  - file: WISE/protocol-bioreactor-setup-monitoring

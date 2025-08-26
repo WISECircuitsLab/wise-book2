@@ -1,5 +1,4 @@
-Content in Jupyter Book
+ Protocols and Procedures
 =======================
 
-There are many ways to write content in Jupyter Book. This short section
-covers a few tips for how to do so.
+This section contains many  Protocols and Procedures that are required in this project.

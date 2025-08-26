@@ -8,9 +8,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title> Protocols and Procedures &#8212;</title>
-
-
+    <title>BioMADE Project High Level Overview &#8212; Guide</title>
+  
+  
+  
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
@@ -52,14 +53,17 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>
+      const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js";
+      // thebe_selector, thebe_selector_input, and thebe_selector_output are already declared elsewhere, so do not redeclare them here.
+    </script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'WISE/content';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'WISE/intro';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Protocol STM32Programmer_Guide" href="Protocol_STM32Programmer_Guide.html" />
-    <link rel="prev" title="BIOMADE Electrochemical Bioreactor Monitoring" href="../biooverview.html" />
+    <link rel="next" title="FPGA Programming Protocol" href="FPGA_Programming_Protocol.html" />
+    <link rel="prev" title=" Protocols and Procedures" href="content.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,13 +178,12 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../SPI-Protocol.html">SPI Protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biooverview.html">BIOMADE Electrochemical Bioreactor Monitoring</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#"> Protocols and Procedures</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="arabic simple">
-<li class="toctree-l2"><a class="reference internal" href="Protocol_STM32Programmer_Guide.html">Protocol STM32Programmer_Guide</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="content.html"> Protocols and Procedures</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Protocol STM32Programmer_Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FPGA_Programming_Protocol.html">FPGA Programming Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="protocol-bioreactor-setup-monitoring.html">Protocol for Bioreactor Setup and Monitoring</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Protocol_for_CV_and_EIS_Experiments.html">Protocol for CV and EIS Experiments</a></li>
 
-</ul>
 </ul>
 </details></li>
 </ul>
@@ -237,7 +240,7 @@
       
       
       
-      <li><a href="../_sources/WISE/content.md" target="_blank"
+      <li><a href="../_sources/WISE/intro.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -319,7 +322,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1> Protocols and Procedures</h1>
+    <h1>BioMADE Electrochemical Bioreactor Monitoring Guide</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -333,12 +336,88 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="content-in-jupyter-book">
-<h1> Protocols and Procedures<a class="headerlink" href="#content-in-jupyter-book" title="Link to this heading">#</a></h1>
-<p>In this section there are many  Protocols and Procedures that are required for this project.</p>
-<div class="toctree-wrapper compound">
-</div>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="programmer-guide">
+<h1>Protocol STM32Programmer_Guide<a class="headerlink" href="programmer-guide" title="Link to this heading">#</a></h1>
+<h4>Software:</h4>
+<ol>
+  <li>Install<a href="https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE"> Arduino IDE</a> if you haven’t already</li>
+  <li>Install <a href="https://www.st.com/en/development-tools/stm32cubeprog.html">STM32CubeProgrammer</a></li>
+     <ol type="a">
+        <li>This should show up as a folder called “STMicroelectronics.” → Move this to your application folder for easy access </li>
+        <li>The path inside this folder should be as follows: STMicroelectronics → STMCube → STM32CubeProgrammer → here, the actual application will reside</li>
+     </ol>
+  <li>Install <a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32CubeIDE</a> (most likely won’t need, but download anyway)</li>
+</ol>
+
+<h4>Hardware:</h4>
+<ol>
+  <li>MCU of use</li>
+    <ol type="a">
+      <li>Always try to program through Arduino first (ensure that Arduino supports your MCU; if not, use the following method)</li>
+    </ol>
+  <li>ST LINK (not needed if using Arduino IDE) </li>
+  <li>USB/USB-C Cable </li>
+</ol>
+
+<h4>Set Up:</h4>
+<ol>
+  <li>Using jumper wires, make the following connections from the ST Link to the MCU</li>
+  <ol type="a">
+    <li>SWDIO → PA13 (for the STM32WLE5JC), check the pinout diagram if a different MCU</li>
+    <li>SWDCLK → CLK</li>
+    <li>VDD → 3V3 or 5V → STM32WLE5JC uses 3V3, check data sheet if something different</li>
+    <li>GND → GND </li>
+    <li>Reset → Reset </li>
+  </ol>
+  <li>Once the connections to the MCU are established, open the STM32CubeProgrammer Application. You should see the following:</li>
+  <img src="program.jpg" alt="Image Description">
+  <li>On the right side, under the ST-Link Configuration, click the refresh button to the right of the serial number drop-down </li>
+  <ol type="a">
+    <li>Your ST Link serial number should appear, and fill in the other information. The image below shows what it should look like:</li>
+    <img src="tab.jpg" alt="Image Description">
+  </ol>
+  <li>Now to connect </li>
+  <ol>
+    <li>Either hit the reset button or ground the reset pin</li>
+    <li>Hold the reset, then hit the green “Connect” button </li>
+    <li>Then release the reset </li>
+    <li>YOU SHOULD BE CONNECTED NOW</li>
+  </ol>
+  <li>Once connected, go to the left sidebar to “OB” </li>
+  <li>Here, expand the Read Protection tab and change the read protection to AA. This removes it.</li>
+  <li>Then hit “Apply”</li>
+  <li></li>Navigate to this symbol for “Erasing and Programming”<img src="download.jpg" alt="Image Description"></li>
+  <li>Now open Arduino IDE with your desired program </li>
+  <li>Go to Sketch → “Export Compiled Binary” </li>
+  <img src="instruction1.jpg" alt="Image Description">
+  <li>Go back to the STM32CubeProgrammer</li>
+  <li>Under the drop-down down navigate to the path with your Arduino IDE files and the specific sketch, and select the corresponding hex file</li>
+  <img src="instruction2.jpg" alt="Image Description">
+  <li>Select the same programming configurations as in the image above, then select Start Programming </li>
+</ol>
+
+<h3>Debugging/ Helpful Good Links: </h3>
+<ul>
+  <li><a href="https://wiki.seeedstudio.com/LoRa_E5_mini/#specifications"> Wio-E5 mini | Seeed Studio Wiki</a></li>
+  <li>Forum → <a href="https://github.com/orgs/stm32duino/discussions/2467#discussioncomment-12624630"> https://github.com/orgs/stm32duino/discussions/2467#discussioncomment-12624630</a></li>
+  <li>Full guide →<a href="https://revspace.nl/LoRa-E5-mini"> LoRa-E5-mini - RevSpace</a></li>
+  <li><a href="https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html"> Wio-E5 mini Dev Board - STM32WLE5JC, ARM Cortex-M4 and SX126x embedded - Seeed Studio</a></li>
+  <li><a href="https://github.com/bertrik/Arduino_Core_STM32/tree/seeed_lora_e5_mini?tab=readme-ov-file#lora-boards">https://github.com/bertrik/Arduino_Core_STM32/tree/seeed_lora_e5_mini?tab=readme-ov-file#lora-boards</a></li>
+  <li><a href="https://www.disk91.com/2021/technology/lora/lora-e5-the-seeed-studio-stm32-wl-module/">LoRa-E5 the Seeed Studio STM32-WL module - disk91.com - the IoT blog </a></li>
+  <li><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">LoRa-E5</a></li>
+  <li><a href="https://wiki.seeedstudio.com/LoRa_E5_mini/">Wio-E5 mini | Seeed Studio Wiki </a></li>
+
+
+</ul>
+
+<h3>RAKWireless Board: </h3>
+<ul>
+  <li><a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/datasheet/">https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/datasheet/</a></li>
+  <li><a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/quickstart/#rak3172-as-a-loralorawan-modem-via-at-command">https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/quickstart/#rak3172-as-a-loralorawan-modem-via-at-command</a></li>
+
+</ul>
+
+
 
     <script type="text/x-thebe-config">
     {
@@ -371,20 +450,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../biooverview.html"
+       href="content.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">BIOMADE Electrochemical Bioreactor Monitoring</p>
+        <p class="prev-next-title"> Protocols and Procedures</p>
       </div>
     </a>
     <a class="right-next"
-       href="Protocol_STM32Programmer_Guide.html"
+       href="FPGA_Programming_Protocol.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Protocol STM32Programmer_Guide</p>
+        <p class="prev-next-title">FPGA Programming Protocol</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

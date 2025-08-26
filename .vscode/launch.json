@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open README.html",
-            "file": "c:\\Users\\umber\\wise-book\\_build\\html\\README.html"
+            "name": "Open biooverview.html",
+            "file": "c:\\Users\\umber\\wise-book\\_build\\html\\biooverview.html"
         }
     ]
 }
