@@ -1,6 +1,6 @@
 root: CONDUCT
 entries:
-- file: sign-in
+- file: sign-in.html
 - file: SPI Protocol
 - file: README
 - file: WISE/content
