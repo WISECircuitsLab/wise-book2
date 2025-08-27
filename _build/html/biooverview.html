@@ -1,6 +1,88 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In</title>
+<style>
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<!-- The Modal -->
+<div id="signinModal" class="modal">
+  <div class="modal-content">
+    <h3>Sign In</h3>
+    <form id="loginForm">
+      <label>Username</label>
+      <input type="text" name="username" required>
+      <label>Password</label>
+      <input type="password" name="password" required>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// Get modal and button
+const modal = document.getElementById('signinModal');
+const btn = document.getElementById('signinBtn');
+const span = document.getElementsByClassName('close')[0];
+
+// Open modal
+modal.style.display = 'block';
+
+
+
+// Handle form submission
+document.getElementById('loginForm').onsubmit = e => {
+  e.preventDefault();
+  const username = e.target.username.value;
+  const password = e.target.password.value;
+
+  // Check credentials
+  if(username === 'PHO' && password === '303') {
+    alert('Login successful!');
+    modal.style.display = 'none';
+  } else {
+    alert('Invalid username or password!');
+  }
+}
+</script>
+
+</body>
+</html>
+
+
 
 <html lang="en" data-content_root="./" >
 
