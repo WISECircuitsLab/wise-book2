@@ -1,0 +1,5 @@
+# _config.yml
+title: wise-book
+author: Umberto Manganaro
+language: en
+only_build_toc_files: true
