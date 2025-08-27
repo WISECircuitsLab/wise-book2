@@ -1,5 +1,6 @@
 root: CONDUCT
 entries:
+- file: sign-in
 - file: SPI Protocol
 - file: README
 - file: WISE/content
@@ -7,3 +8,4 @@ entries:
   - file: WISE/intro
   - file: WISE/markdown
   - file: WISE/protocol-bioreactor-setup-monitoring
+  - file: WISE/protocol_STM32_programmer_Guide
