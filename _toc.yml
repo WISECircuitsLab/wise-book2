@@ -1,5 +1,6 @@
 root: sign-in
 entries:
+- file: Log in
 - file: SPI Protocol
 - file: README
 - file: WISE/content
