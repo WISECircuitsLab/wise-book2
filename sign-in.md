@@ -32,14 +32,13 @@
 </div>
 
 <script>
-// Wait for the DOM
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('loginForm').addEventListener('submit', e => {
     e.preventDefault();
     const username = e.target.username.value.trim();
     const password = e.target.password.value.trim();
 
-    // Simple credential check
+    
     if (username === 'PHO' && password === '303') {
       alert('Login successful!');
       // Redirect to Table of Contents
