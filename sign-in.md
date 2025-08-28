@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (username === 'PHO' && password === '303') {
       alert('Login successful!');
       // Redirect to Table of Contents
-      window.location.href = 'TableofContents.html';
+      window.location.href = 'log-in.html';
     } else {
       alert('Invalid username or password!');
     }
